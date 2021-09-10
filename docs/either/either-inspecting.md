@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Inspecting Either
+# Inspecting Either instances
 
 Let's now use our `validateChars` function and inspect our Either instances:
 

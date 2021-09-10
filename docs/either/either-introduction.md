@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Either
 
 `Either` type values are the pillars of all the **Fat Arrow** ecosystem. They are used to capture any scenario where
 there are two possible values resulting from a given function application.
