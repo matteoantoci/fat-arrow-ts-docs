@@ -26,8 +26,9 @@ In this example, our `value` maybe containing a `number` or an `Error`. ES deals
 have access to the actual result of our async operation, we must use the `Promise` methods `.then(successCallbackFn)`
 and `.catch(failureCallbackFn)` to address the success or the failure scenarios, respectively.
 
-Moreover, we can **chain** the Promise's methods to express complex flows, and the compiler will take care of running
-lazily the correct callbacks without the need for us to check explicitly if the Promise was successful or not:
+Moreover, ES gives use the possibility to **chain** the Promise's outputs to describe complex flows, and the compiler
+will take care of running lazily the correct callbacks without the need for us to check explicitly if the Promise was
+successful or not:
 
 ```ts
 const value = getValue()

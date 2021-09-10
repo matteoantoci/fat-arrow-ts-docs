@@ -23,16 +23,13 @@ yarn add fat-arrow-ts
 ## A simple example
 
 Let's say we want to write a simple piece of software that can handle **safely** divisions by zero and log the results
-to console.
-
-Here is the plan:
+to console. Here's the plan:
 
 1. Create a `safeDivision` function that can handle divisions by zero by returning a `Right` value in case of success or
    a `Left` value in case of error.
 
 2. Create a `safePrint` function that can log the `safeDivision` output to console using appropriate labels
-   and `console`
-   methods.
+   and `console` methods.
 
 3. Use our functions!
 
@@ -40,18 +37,16 @@ Here is the plan:
 import { left, right, Either } from 'fat-arrow-ts';
 
 const safeDivision = (numerator: number, denominator: number): Either<Error, number> => {
-   if (denominator === 0) {
-      return left(new Error('Division by zero!'))
-   }
-
-   return right(numerator / denominator)
+  return denominator === 0
+    ? left(new Error('Division by zero!'))
+    : right(numerator / denominator)
 }
 
-const safePrint = (value: Either<Error, number>) =>
-        value.fold(
-                (error) => console.error(`Doh! ${error.message}`),
-                (result) => console.log(`Result is ${result}. Hooray!`)
-        )
+const safePrint = (value: Either<Error, number>): void =>
+  value.fold(
+    (error) => console.error(`Doh! ${error.message}`),
+    (result) => console.log(`Result is ${result}. Hooray!`)
+  )
 
 const divisionByFiveResult = safeDivision(10, 5)
 safePrint(divisionByFiveResult) // Result is 2. Hooray!  
