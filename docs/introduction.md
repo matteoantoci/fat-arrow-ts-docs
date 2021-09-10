@@ -4,27 +4,13 @@ sidebar_position: 2
 
 # Introduction
 
-## Inspiration
-
-This library takes inspiration from many other functional programming libraries and languages out there, a few examples
-may include:
-
-* fp-ts, True Myth (TypeScript)
-* Folktale, Sanctuary (Javascript)
-* Arrow (Kotlin)
-* Haskell
-* Rust
-
-Talking strictly about TypeScript first libraries, "fp-ts" is the most feature-rich, but it has a very steep learning
-curve due to its academic jargon and extensive API. On the other hand, **Fat Arrow** (like "True Myth") is lean, and it
-tries to keep a low entry barrier by abstracting the most complex math concepts.
-
-What do all of the mentioned libraries have in common? They deal **safely** with values that represent the **possibility
-of two values**.
+**Fat Arrow** is a library for Typed Functional Programming in TypeScript compatible with Node.js and all major
+browsers.
 
 ## Values with two possibilities
 
-The most straightforward example of this kind of values is the ES `Promise`:
+**Fat Arrow**'s main goal is to deal **safely** with values that represent the **possibility of two values**. The most
+straightforward example of this kind of values is the ES `Promise`:
 
 ```ts
 type MyValue = Promise<number>
@@ -36,9 +22,9 @@ const getValue = async (): MyValue => {
 const value = getValue()
 ```
 
-In this example, our `value` maybe containing a `number` or an `Error`. JS deals elegantly with this binary scenario: to
-have access to the actual result of our async operation, we must use the `Promise` methods `.then(successCallbackFn)` to
-handle the successful scenario and `.catch(failureCallbackFn)` to address the failing one.
+In this example, our `value` maybe containing a `number` or an `Error`. ES deals elegantly with this binary scenario: to
+have access to the actual result of our async operation, we must use the `Promise` methods `.then(successCallbackFn)`
+and `.catch(failureCallbackFn)` to address the success or the failure scenarios, respectively.
 
 Moreover, we can **chain** the Promise's methods to express complex flows, and the compiler will take care of running
 lazily the correct callbacks without the need for us to check explicitly if the Promise was successful or not:
@@ -65,4 +51,20 @@ do?
 **Fat Arrow** provides you with the essential tools to create _binary possibility values_ and _chain_ actions on them by
 leveraging on the type-safety that TypeScript offers.
 
-Keep reading!
+## Inspiration
+
+This library takes inspiration from many other functional programming libraries and languages out there, a few examples
+may include:
+
+* fp-ts, True Myth (TypeScript)
+* Folktale, Sanctuary (Javascript)
+* Arrow (Kotlin)
+* Haskell
+* Rust
+
+Talking about TypeScript-first libraries, "fp-ts" is the most feature-rich, but it has a very steep learning curve due
+to its academic jargon and its full-blown functional programming syntax.
+
+On the other hand, **Fat Arrow** (like "True Myth") is lean, and it tries to keep a shallow entry barrier by abstracting
+the most theoretical concepts and keeping the API surface at the minimum.
+
