@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
   title: '=> Fat Arrow',
-  tagline: 'A Typed Functional Programming library for humans',
+  tagline: 'Typed Functional Programming in TypeScript made simple',
   url: 'https://matteoantoci.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
