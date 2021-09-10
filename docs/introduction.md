@@ -67,5 +67,6 @@ Talking about TypeScript-first libraries, "fp-ts" is the most feature-rich, but 
 to its academic jargon and its full-blown functional programming syntax.
 
 On the other hand, **Fat Arrow** (like "True Myth") is lean, and it tries to keep a shallow entry barrier by abstracting
-the most theoretical concepts and keeping the API surface at the minimum.
-
+the most theoretical concepts and keeping the API surface at the minimum. **Fat Arrow** uses a mixture of FP and
+OOP paradigms and strongly opinionated design decisions to achieve the right balance between ease of
+use and flexibility.
