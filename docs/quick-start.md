@@ -25,6 +25,8 @@ yarn add fat-arrow-ts
 Let's say we want to write a simple piece of software that can handle **safely** divisions by zero and log the results
 to console.
 
+Here is the plan:
+
 1. Create a `safeDivision` function that can handle divisions by zero by returning a `Right` value in case of success or
    a `Left` value in case of error.
 
