@@ -45,8 +45,7 @@ success.equals(left(Error('Please enter alphabets only'))) // true
 
 :::tip Structural equality
 
-`equals` method checks for **structural equality** by using
-the [fast-deep-equal](https://www.npmjs.com/package/fast-deep-equal) library under the hood:
+`equals` method checks for **structural equality**:
 
 ```ts
 import { right } from 'fat-arrow-ts'

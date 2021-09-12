@@ -15,9 +15,9 @@ type Either<E, A> = Right<E, A> | Left<E, A>
 
 The `Either` possible scenarios are expressed by its two variants the `Right` type OR the `Left` type.
 
-## Error handling
+## Creating Either instances
 
-The most typical use case of `Either` values is error handling. As an example, imagine you have a form with an input
+The most typical use case for `Either` values is _error handling_. As an example, imagine you have a form with an input
 that needs to be validated. As a first step we are going to create a `ValidatedInput` type by aliasing an `Either` type
 so that
 
@@ -49,6 +49,25 @@ export const validateChars = (input: string): ValidatedInput => {
 
 As you can see, we can create Either instances by using the constructor functions `right` and `left`.
 
+:::danger Typings
+
+Always create your `Either` instances specifying which type of values they are going to contain. You can easily do that
+upon creation:
+
+```ts
+import { right } from 'fat-arrow-ts'
+
+const anExample = right<Error, string>('Hello world!')
+
+// or
+
+const anotherExample: Either<Error, string> = right('Hello world!')
+```
+
+Or by setting your custom factory-functions return type, as we've seen in the previous `validateChars` example.
+
+:::
+
 :::tip Nesting Either instances
 
 To support more complex use cases you can also create nested Either instances:
@@ -60,3 +79,5 @@ const inner: Either<string, number> = right(3)
 
 const outer: Either<Error, Either<string, number>> = right(inner)
 ```
+
+:::
