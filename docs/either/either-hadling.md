@@ -95,3 +95,33 @@ const handleClick = (input: string) => {
   )
 }
 ```
+
+## `fold` overloads
+
+So far, we've seen a couple of ways to use the `fold` method, but it actually comes with two other overloads.
+
+### No arguments
+
+You can unwrap your values without pre-processing them by calling `fold` without arguments:
+
+```ts
+import { right } from 'fat-arrow-ts'
+
+const either = right<Error, string>('It works!')
+
+console.log(either.fold()) // Prints 'It works!'
+```
+
+### Only left argument
+
+You can also unwrap your values by passing just the first argument (the _left_ handler) to the `fold` method:
+
+```ts
+import { right } from 'fat-arrow-ts'
+
+const either = left<Error, string>(Error("An error occured!"))
+
+const message: string = either.fold(error => error.message) 
+
+console.log(message) // Prints 'An error occured!'
+```
