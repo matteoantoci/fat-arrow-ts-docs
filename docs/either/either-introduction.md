@@ -42,6 +42,21 @@ import { ValidatedInput } from './types'
 const ONLY_CHARS = /^[A-Za-z]+$/;
 
 export const validateChars = (input: string): ValidatedInput => {
-  return input.match(ONLY_CHARS) ? right(input.trim()) : left(Error('Please enter alphabets only'))
+  const trimmedInput = input.trim()
+  return trimmedInput.match(ONLY_CHARS) ? right(trimmedInput) : left(Error('Please enter alphabets only'))
 }
+```
+
+As you can see, we can create Either instances by using the constructor functions `right` and `left`.
+
+:::tip Nesting Either instances
+
+To support more complex use cases you can also create nested Either instances:
+
+```ts
+import { Either, right } from 'fat-arrow-ts'
+
+const inner: Either<string, number> = right(3)
+
+const outer: Either<Error, Either<string, number>> = right(inner)
 ```
