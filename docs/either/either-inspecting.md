@@ -52,3 +52,4 @@ import { right } from 'fat-arrow-ts'
 
 right({ foo: 'bar' }).equals(right({ foo: 'bar' })) // true
 ```
+:::

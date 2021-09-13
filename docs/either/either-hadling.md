@@ -26,8 +26,8 @@ const postToServer = async (input: string): void => {
   // Run server request...
 }
 
-const handleClick = (input: string) => {
-  const validatedInput = validate(input)
+const handleClick = (input: string): void => {
+  const validatedInput = validateChars(input)
 
   validatedInput.fold(
     (error: Error): void => {
@@ -80,8 +80,8 @@ import { log } from './log'
 
 // ...
 
-const handleClick = (input: string) => {
-  const validatedInput = validate(input)
+const handleClick = (input: string): void => {
+  const validatedInput = validateChars(input)
 
   log(validatedInput) // Runs in both scenarios
 
