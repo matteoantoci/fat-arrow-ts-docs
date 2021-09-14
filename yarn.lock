@@ -1278,7 +1278,7 @@
     url-loader "^4.1.1"
     webpack "^5.40.0"
 
-"@docusaurus/module-type-aliases@2.0.0-beta.6":
+"@docusaurus/module-type-aliases@^2.0.0-beta.6":
   version "2.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.6.tgz#6d7388d65e1cf31e097f4e5924ec46cd6e7eff1c"
   integrity sha512-TrJ0u4F3mZ7uQNga22why3SsoNwlHp6vltDLlWI80jZmZpnk9BJglpcR8MPOTSEjyUgMxJ6B3q0PA/rWzupWZA==
@@ -1866,7 +1866,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.14":
+"@types/react@*", "@types/react@^17.0.20":
   version "17.0.20"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.20.tgz#a4284b184d47975c71658cd69e759b6bd37c3b8c"
   integrity sha512-wWZrPlihslrPpcKyCSlmIlruakxr57/buQN1RjlIeaaTWDLtJkTtRW429MoQJergvVKc4IWBpRhWw7YNh/7GVA==
@@ -8174,10 +8174,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.3.5:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
-  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
+typescript@^4.4.3:
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
+  integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
 
 ua-parser-js@^0.7.18:
   version "0.7.28"
