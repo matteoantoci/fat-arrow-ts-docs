@@ -2,9 +2,9 @@
     <rect width="100%" height="100%" fill="none"/>
     <g class="currentLayer fat-arrow-logo">
         <g>
-            <path class="background" fill="#181a18"
+            <path class="background" fill="#ebedf0"
                   d="M82.698 41.349a41.349 41.349 0 0 1-41.349 41.349A41.349 41.349 0 0 1 0 41.349 41.349 41.349 0 0 1 41.349 0a41.349 41.349 0 0 1 41.349 41.349z"/>
-            <path class="foreground" fill="#41cc64"
+            <path class="foreground" fill="#3ea4b3"
                   d="M41.214 37.733H14.327v-6.085h26.887v6.085zm0 13.495H14.327v-6.074h26.887v6.074zm27.157-6.899L45.816 58.941v-7.765l15.489-9.707v-.229l-15.489-9.707v-7.776l22.555 14.612v5.96z"
                   style="white-space:pre"/>
         </g>

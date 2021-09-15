@@ -17,7 +17,7 @@ const HomepageHeader: FC = () => {
           <Link
             className="button button--secondary button--lg"
             to="/docs/quick-start">
-            Fat Arrow Quick Start - 5min ⏱️
+            Get started • 5 min ⏱️
           </Link>
         </div>
       </div>
